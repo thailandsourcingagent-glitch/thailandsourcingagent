@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thailand Sourcing Agent | Inspection & QC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#070b14;color:white;overflow-x:hidden;}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d');
+background-size:cover;
+background-position:center;
+}
+
+.logo{
+position:absolute;
+top:20px;
+left:30px;
+font-weight:700;
+color:#00d084;
+font-size:20px;
+}
+
+.hero h1{font-size:55px;}
+.hero p{max-width:750px;margin:20px auto;opacity:0.85;}
+
+.btn{
+padding:14px 28px;
+margin:8px;
+border-radius:40px;
+background:linear-gradient(135deg,#00d084,#00a3ff);
+color:white;
+text-decoration:none;
+display:inline-block;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{transform:scale(1.05);}
+
+/* SECTIONS */
+section{padding:80px 10%;}
+.title{text-align:center;font-size:40px;margin-bottom:40px;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.1);
+padding:25px;
+border-radius:16px;
+transition:0.3s;
+}
+
+.card:hover{transform:translateY(-10px);}
+
+/* STATS */
+.stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+gap:20px;
+}
+
+.stats h2{
+color:#00d084;
+font-size:40px;
+}
+
+/* FLOAT BUTTONS */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.chat-toggle{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#00a3ff;
+padding:15px;
+border-radius:50px;
+cursor:pointer;
+}
+
+/* CHAT */
+.chat{
+position:fixed;
+bottom:90px;
+right:20px;
+width:260px;
+background:#0f172a;
+border-radius:15px;
+display:none;
+flex-direction:column;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+.chat-header{
+background:#00d084;
+padding:10px;
+font-weight:bold;
+}
+
+.chat-body{
+padding:10px;
+height:170px;
+overflow:auto;
+font-size:13px;
+}
+
+.chat-input{
+display:flex;
+}
+
+.chat-input input{
+flex:1;
+padding:8px;
+border:none;
+}
+
+.chat-input button{
+background:#00d084;
+border:none;
+padding:8px;
+}
+
+/* FADE */
+.fade{
+opacity:0;
+transform:translateY(20px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:768px){
+.hero h1{font-size:32px;}
+.stats{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="logo">Thailand Sourcing Agent</div>
+
+<div>
+<h1>Reliable Sourcing & Inspection Partner</h1>
+<p>Product Sourcing • Factory Inspection • Quality Control • Shipping Support in Thailand</p>
+
+<a class="btn" href="https://wa.me/66615608093">WhatsApp</a> <a class="btn" href="mailto:thailandsourcingagent@gmail.com">Email</a> <a class="btn" href="https://www.linkedin.com/in/syed-wahaj-b22723411">LinkedIn</a>
+
+</div>
+
+</div>
+
+<!-- SERVICES -->
+
+<section class="fade">
+<h2 class="title">Services</h2>
+
+<div class="grid">
+<div class="card">Product Sourcing</div>
+<div class="card">Factory Inspection</div>
+<div class="card">Quality Control</div>
+<div class="card">Supplier Verification</div>
+<div class="card">Shipping Support</div>
+<div class="card">Container Loading</div>
+</div>
+</section>
+
+<!-- STATS -->
+
+<section class="fade">
+<h2 class="title">Results</h2>
+
+<div class="stats">
+<div><h2 class="counter">500</h2><p>Factories</p></div>
+<div><h2 class="counter">2500</h2><p>Inspections</p></div>
+<div><h2 class="counter">40</h2><p>Countries</p></div>
+<div><h2 class="counter">98</h2><p>Satisfaction</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="fade">
+<h2 class="title">Contact Us</h2>
+
+<div style="text-align:center;">
+<h3>Syed Wahaj</h3>
+<p>📞 +66 615608093</p>
+<p>📧 thailandsourcingagent@gmail.com</p>
+</div>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/66615608093">WhatsApp</a>
+
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<!-- CHAT -->
+
+<div class="chat" id="chat">
+<div class="chat-header">Assistant</div>
+<div class="chat-body" id="chatBody">Ask about sourcing</div>
+<div class="chat-input">
+<input id="msg">
+<button onclick="send()">Send</button>
+</div>
+</div>
+
+<script>
+
+/* COUNTER */
+document.querySelectorAll(".counter").forEach(c=>{
+let t=+c.innerText,i=0;
+let x=setInterval(()=>{i++;c.innerText=i;if(i>=t)clearInterval(x);},15);
+});
+
+/* FADE */
+let f=document.querySelectorAll(".fade");
+window.addEventListener("scroll",()=>{
+f.forEach(e=>{
+if(e.getBoundingClientRect().top<600)e.classList.add("show");
+});
+});
+
+/* CHAT */
+function toggleChat(){
+let c=document.getElementById("chat");
+c.style.display=c.style.display==="flex"?"none":"flex";
+c.style.flexDirection="column";
+}
+
+function send(){
+let m=document.getElementById("msg").value.toLowerCase();
+let b=document.getElementById("chatBody");
+
+b.innerHTML+="<br><b>You:</b> "+m;
+
+let r="We will contact you soon.";
+
+if(m.includes("price")) r="Pricing depends on service.";
+if(m.includes("inspection")) r="Yes we provide inspection reports.";
+if(m.includes("shipping")) r="We support sea & air shipping.";
+
+b.innerHTML+="<br><b>Agent:</b> "+r;
+document.getElementById("msg").value="";
+}
+
+</script>
+
+</body>
+</html>
